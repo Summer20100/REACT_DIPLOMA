@@ -47,8 +47,8 @@ const MainLoaded = () => {
     fetchData()
   }, [urlCatalogItm])
  
-  // console.log(urlTopsalesItm)
-  // console.log(catalogItm)
+  console.log(urlTopsalesItm)
+  console.log(catalogItm)
   
   return (
     <main className="container">

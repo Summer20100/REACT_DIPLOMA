@@ -2,9 +2,6 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Categories from './categories'
 import Itm from './itm'
-import sandals_myer from './../../../img/products/sandals_myer.jpg'
-import sandals_keira from './../../../img/products/sandals_keira.jpg'
-import space_sneakers from './../../../img/products/space_sneakers.jpg'
 
 const CatalogSet = ({ catalogItm }) => {
   const [categoriesItm, setCategoriesItm] = useState([])
@@ -28,6 +25,8 @@ const CatalogSet = ({ catalogItm }) => {
     }
     fetchData()
   }, [categoriesUrl])
+
+  console.log(import.meta.env.VITE_CATEGORIES)
 
   const setCategories = categoriesItm.map((el,ind) => <Categories key={ el.id } {...el} /> )
 
