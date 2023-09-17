@@ -5,101 +5,101 @@ import space_sneakers from './../../img/products/space_sneakers.jpg'
 
 const Catalog = () => {
   return (
-    <main class="container">
-      <div class="row">
-        <div class="col">
-          <section class="catalog">
-            <h2 class="text-center">Каталог</h2>
-            <form class="catalog-search-form form-inline">
-              <input class="form-control" placeholder="Поиск" />
+    <main className="container">
+      <div className="row">
+        <div className="col">
+          <section className="catalog">
+            <h2 className="text-center">Каталог</h2>
+            <form className="catalog-search-form form-inline">
+              <input className="form-control" placeholder="Поиск" />
             </form>
-            <ul class="catalog-categories nav justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Все</a>
+            <ul className="catalog-categories nav justify-content-center">
+              <li className="nav-item">
+                <a className="nav-link active" href="#">Все</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Женская обувь</a>
+              <li className="nav-item">
+                <a className="nav-link" href="#">Женская обувь</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Мужская обувь</a>
+              <li className="nav-item">
+                <a className="nav-link" href="#">Мужская обувь</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Обувь унисекс</a>
+              <li className="nav-item">
+                <a className="nav-link" href="#">Обувь унисекс</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Детская обувь</a>
+              <li className="nav-item">
+                <a className="nav-link" href="#">Детская обувь</a>
               </li>
             </ul>
-            <div class="row">
-              <div class="col-4">
-                <div class="card catalog-item-card">
+            <div className="row">
+              <div className="col-4">
+                <div className="card catalog-item-card">
                   <img src={ sandals_myer }
-                    class="card-img-top img-fluid" alt="Босоножки 'MYER'" />
-                  <div class="card-body">
-                    <p class="card-text">Босоножки 'MYER'</p>
-                    <p class="card-text">34 000 руб.</p>
-                    <a href="/products/1.html" class="btn btn-outline-primary">Заказать</a>
+                    className="card-img-top img-fluid" alt="Босоножки 'MYER'" />
+                  <div className="card-body">
+                    <p className="card-text">Босоножки 'MYER'</p>
+                    <p className="card-text">34 000 руб.</p>
+                    <a href="/products/1.html" className="btn btn-outline-primary">Заказать</a>
                   </div>
                 </div>
               </div>
-              <div class="col-4">
-                <div class="card catalog-item-card">
+              <div className="col-4">
+                <div className="card catalog-item-card">
                   <img src={ sandals_keira }
-                    class="card-img-top img-fluid" alt="Босоножки 'Keira'" />
-                  <div class="card-body">
-                    <p class="card-text">Босоножки 'Keira'</p>
-                    <p class="card-text">7 600 руб.</p>
-                    <a href="/products/1.html" class="btn btn-outline-primary">Заказать</a>
+                    className="card-img-top img-fluid" alt="Босоножки 'Keira'" />
+                  <div className="card-body">
+                    <p className="card-text">Босоножки 'Keira'</p>
+                    <p className="card-text">7 600 руб.</p>
+                    <a href="/products/1.html" className="btn btn-outline-primary">Заказать</a>
                   </div>
                 </div>
               </div>
-              <div class="col-4">
-                <div class="card catalog-item-card">
+              <div className="col-4">
+                <div className="card catalog-item-card">
                   <img src={ space_sneakers }
-                    class="card-img-top img-fluid" alt="Супергеройские кеды" />
-                  <div class="card-body">
-                    <p class="card-text">Супергеройские кеды</p>
-                    <p class="card-text">1 400 руб.</p>
-                    <a href="/products/1.html" class="btn btn-outline-primary">Заказать</a>
+                    className="card-img-top img-fluid" alt="Супергеройские кеды" />
+                  <div className="card-body">
+                    <p className="card-text">Супергеройские кеды</p>
+                    <p className="card-text">1 400 руб.</p>
+                    <a href="/products/1.html" className="btn btn-outline-primary">Заказать</a>
                   </div>
                 </div>
               </div>
-              <div class="col-4">
-                <div class="card catalog-item-card">
+              <div className="col-4">
+                <div className="card catalog-item-card">
                   <img src={ sandals_myer }
-                    class="card-img-top img-fluid" alt="Босоножки 'MYER'" />
-                  <div class="card-body">
-                    <p class="card-text">Босоножки 'MYER'</p>
-                    <p class="card-text">34 000 руб.</p>
-                    <a href="/products/1.html" class="btn btn-outline-primary">Заказать</a>
+                    className="card-img-top img-fluid" alt="Босоножки 'MYER'" />
+                  <div className="card-body">
+                    <p className="card-text">Босоножки 'MYER'</p>
+                    <p className="card-text">34 000 руб.</p>
+                    <a href="/products/1.html" className="btn btn-outline-primary">Заказать</a>
                   </div>
                 </div>
               </div>
-              <div class="col-4">
-                <div class="card catalog-item-card">
+              <div className="col-4">
+                <div className="card catalog-item-card">
                   <img src={sandals_keira}
-                    class="card-img-top img-fluid" alt="Босоножки 'Keira'" />
-                  <div class="card-body">
-                    <p class="card-text">Босоножки 'Keira'</p>
-                    <p class="card-text">7 600 руб.</p>
-                    <a href="/products/1.html" class="btn btn-outline-primary">Заказать</a>
+                    className="card-img-top img-fluid" alt="Босоножки 'Keira'" />
+                  <div className="card-body">
+                    <p className="card-text">Босоножки 'Keira'</p>
+                    <p className="card-text">7 600 руб.</p>
+                    <a href="/products/1.html" className="btn btn-outline-primary">Заказать</a>
                   </div>
                 </div>
               </div>
-              <div class="col-4">
-                <div class="card catalog-item-card">
+              <div className="col-4">
+                <div className="card catalog-item-card">
                   <img src={ space_sneakers }
-                    class="card-img-top img-fluid" alt="Супергеройские кеды" />
-                  <div class="card-body">
-                    <p class="card-text">Супергеройские кеды</p>
-                    <p class="card-text">1 400 руб.</p>
-                    <a href="/products/1.html" class="btn btn-outline-primary">Заказать</a>
+                    className="card-img-top img-fluid" alt="Супергеройские кеды" />
+                  <div className="card-body">
+                    <p className="card-text">Супергеройские кеды</p>
+                    <p className="card-text">1 400 руб.</p>
+                    <a href="/products/1.html" className="btn btn-outline-primary">Заказать</a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="text-center">
-              <button class="btn btn-outline-primary">Загрузить ещё</button>
+            <div className="text-center">
+              <button className="btn btn-outline-primary">Загрузить ещё</button>
             </div>
           </section>
         </div>

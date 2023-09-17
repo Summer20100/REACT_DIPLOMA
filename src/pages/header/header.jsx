@@ -15,16 +15,16 @@ const Header = () => {
               <div className="collapse navbar-collapse justify-content-space-between" id="navbarMain">
                 <ul className="navbar-nav mr-auto">
                   <li className="nav-item active">
-                    <Link to="/REACT_DIPLOMA/" className="nav-link">Главная</Link>
+                    <Link to="/" className="nav-link">Главная</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/REACT_DIPLOMA/catalog" className="nav-link">Каталог</Link>
+                    <Link to="/catalog" className="nav-link">Каталог</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/REACT_DIPLOMA/about" className="nav-link">О магазине</Link>
+                    <Link to="/about" className="nav-link">О магазине</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/REACT_DIPLOMA/contacts" className="nav-link">Контакты</Link>
+                    <Link to="/contacts" className="nav-link">Контакты</Link>
                   </li>
                 </ul>
                 <div>

@@ -1,11 +1,11 @@
 
 const Error404 = () => {
   return (
-    <main class="container">
-      <div class="row">
-        <div class="col">
-          <section class="top-sales">
-            <h2 class="text-center">Страница не найдена</h2>
+    <main className="container">
+      <div className="row">
+        <div className="col">
+          <section className="top-sales">
+            <h2 className="text-center">Страница не найдена</h2>
             <p>
               Извините, такая страница не найдена!
             </p>
