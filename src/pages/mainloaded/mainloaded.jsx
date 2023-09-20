@@ -1,13 +1,13 @@
 import TopSales from './components/topsales'
 import CatalogSet from './components/catalogset'
 import { useEffect, useState } from 'react'
-
+//import store from '../../redux/store'
+ 
 const MainLoaded = () => {
   const [topsalesItm, setTopsalesItm] = useState([])
   const [catalogItm, setCatalogItm] = useState([])
+ // console.log(store)
 
-  //let urlTopsalesItm = 'https://reactdiplomabackend.summer20100.repl.co/api/top-sales'
-  //let urlCatalogItm = 'https://reactdiplomabackend.summer20100.repl.co/api/items'
   let urlTopsalesItm = import.meta.env.VITE_TOP_SALES
   let urlCatalogItm = import.meta.env.VITE_ITEMS
   
@@ -47,8 +47,8 @@ const MainLoaded = () => {
     fetchData()
   }, [urlCatalogItm])
  
-  console.log(urlTopsalesItm)
-  console.log(catalogItm)
+  //console.log(urlTopsalesItm)
+  //console.log(catalogItm)
   
   return (
     <main className="container">

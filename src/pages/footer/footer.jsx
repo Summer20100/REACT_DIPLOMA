@@ -1,9 +1,19 @@
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { incrementLikes, decrementLikes } from './../../redux/actions'
 
-const Footer = () => {
+const Footer = (props) => {
+  console.log('footer: ', props)
   return (
     <footer className="container bg-light footer">
       <div className="row">
+
+
+        <span>{props.title}</span>
+        <button onClick={props.onMyClick}>Нажми на меня</button>
+        <button onClick={props.onMyReturn}>Нажми</button>
+
+
         <div className="col">
           <section>
             <h5>Информация</h5>
@@ -35,7 +45,7 @@ const Footer = () => {
           <section>
             <div className="footer-copyright">
               2009-2019 © BosaNoga.ru — модный интернет-магазин обуви и аксессуаров.
-              Все права защищены.<br/>
+              Все права защищены.<br />
               Доставка по всей России!
             </div>
           </section>
@@ -57,4 +67,20 @@ const Footer = () => {
   )
 }
 
-export default Footer
+function mapStateToProps(state) {
+  const { likesReducer } = state
+  return {
+    title: likesReducer.price
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    onMyClick: () => dispatch(incrementLikes()),
+    onMyReturn: () => dispatch(decrementLikes())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Footer)
+
+//export default Footer

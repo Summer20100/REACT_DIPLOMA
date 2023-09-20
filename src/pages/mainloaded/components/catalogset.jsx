@@ -1,10 +1,12 @@
+//import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Categories from './categories'
 import Itm from './itm'
 
-const CatalogSet = ({ catalogItm }) => {
+const CatalogSet = ({catalogItm}) => {
   const [categoriesItm, setCategoriesItm] = useState([])
+  //console.log(store)
 
   //let categoriesUrl = 'https://reactdiplomabackend.summer20100.repl.co/api/categories'
   let categoriesUrl = import.meta.env.VITE_CATEGORIES
@@ -26,12 +28,12 @@ const CatalogSet = ({ catalogItm }) => {
     fetchData()
   }, [categoriesUrl])
 
-  console.log(import.meta.env.VITE_CATEGORIES)
+  //console.log(import.meta.env.VITE_CATEGORIES)
 
   const setCategories = categoriesItm.map((el,ind) => <Categories key={ el.id } {...el} /> )
 
   const setCatalogItm = catalogItm.map((el,ind) => <Itm key={ el.id } {...el} /> )
-  console.log(setCatalogItm)
+  //console.log(setCatalogItm)
 
   return (
     <section className="catalog">
@@ -52,6 +54,16 @@ const CatalogSet = ({ catalogItm }) => {
       </div>
     </section>
   )
+
+  
 }
+function mapStateToProps(state) {
+    console.log('mapStateToProps:', state)
+    return {
+      title: state.title
+    }
+}
+
+//export default connect(mapStateToProps)(CatalogSet)
 
 export default CatalogSet
