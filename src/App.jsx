@@ -1,6 +1,8 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom'
-import Title from './Title';
+import { useDispatch, useSelector } from "react-redux"
+import { useEffect, useState } from 'react'
+
 //import { Provider } from 'react-redux'
 //import store from './redux/store'
 
@@ -13,27 +15,35 @@ import Cart from './pages/cart/cart'
 import About from './pages/about/about';
 import Contacts from './pages/contacts/contacts';
 import Error404 from './pages/error404/error404';
+import NullProduct from './pages/error404/nullProduct';
 import Footer from './pages/footer/footer';
 
 function App() {
+  const [storageLength, setStorageLength] = useState(0)
+  useEffect(() => {
+    setStorageLength(localStorage.length);
+  }, [storageLength]);
 
+  const length = useSelector(state => {
+    const { catalogReducer } = state
+    return catalogReducer.data.length
+  })
+
+  console.log('length', length)
+  
   return (
     <>
       <Header />
-      {/* <Product /> */}
       <Routes>
-        {/* <MainLoad /> */}
         <Route path='/' element={<MainLoaded />} />
-        <Route path='/catalog' element={<Catalog />} />
-        <Route path='/product' element={<Product />} />
-        <Route path='/about' element={<About />} />
+        {/* <Route path='/catalog' element={ !length ? <NullProduct /> : <Catalog />} /> */}
+        <Route path='/catalog' element={ <Catalog />} />
+        <Route path='/catalog/:id' element={<Product />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/about' element={<About />} />
         <Route path='/contacts' element={<Contacts />} />
-        <Route path='/error404' element={<Error404 />} />
-
-        {/* <Error404 /> */}
+        <Route path='*' element={<Error404 />} />
       </Routes>
-      <Title />
       <Footer />
     </>
   )

@@ -5,7 +5,8 @@ const initialState = {
 }
 
 export const inputReducer = (state = initialState, action) => {
-    console.log("input text Reducer:  ", action)
+  //const dataTopSales = getData()
+   // console.log("input text Reducer:  ", action)
 
     switch(action.type) {
 

@@ -129,22 +129,41 @@ section {
   height: 40%;
   position: absolute;
   border-radius: 50%;
-  animation: spin 2s ease infinite;
+  -webkit-animation: spin 2s ease infinite;
+          animation: spin 2s ease infinite;
 }
 .preloader :first-child {
   background: #19A68C;
-  animation-delay: -1.5s;
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
 }
 .preloader :nth-child(2) {
   background: #ff748b;
-  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
 }
 .preloader :nth-child(3) {
   background: #ffb676;
-  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
 }
 .preloader :last-child {
   background: #727e86;
+}
+@-webkit-keyframes spin {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(160%);
+  }
+  50% {
+    transform: translate(160%, 160%);
+  }
+  75% {
+    transform: translate(0, 160%);
+  }
 }
 @keyframes spin {
   0%,

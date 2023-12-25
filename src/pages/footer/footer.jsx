@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { incrementLikes, decrementLikes } from './../../redux/actions'
+// import { incrementLikes, decrementLikes } from './../../redux/actions'
 
-const Footer = (props) => {
-  console.log('footer: ', props)
+const Footer = () => {
+  //console.log('footer: ', props)
   return (
     <footer className="container bg-light footer">
       <div className="row">
 
 
-        <span>{props.title}</span>
+        {/* <span>{props.title}</span>
         <button onClick={props.onMyClick}>Нажми на меня</button>
-        <button onClick={props.onMyReturn}>Нажми</button>
+        <button onClick={props.onMyReturn}>Нажми</button> */}
 
 
         <div className="col">
@@ -67,20 +67,20 @@ const Footer = (props) => {
   )
 }
 
-function mapStateToProps(state) {
-  const { likesReducer } = state
-  return {
-    title: likesReducer.price
-  }
-}
+// function mapStateToProps(state) {
+//   const { likesReducer } = state
+//   return {
+//     title: likesReducer.price
+//   }
+// }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    onMyClick: () => dispatch(incrementLikes()),
-    onMyReturn: () => dispatch(decrementLikes())
-  }
-}
+// function mapDispatchToProps(dispatch) {
+//   return {
+//     onMyClick: () => dispatch(incrementLikes()),
+//     onMyReturn: () => dispatch(decrementLikes())
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Footer)
+// export default connect(mapStateToProps, mapDispatchToProps)(Footer)
 
-//export default Footer
+export default Footer
